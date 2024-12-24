@@ -21,6 +21,7 @@ public class Initialization {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("disable-notifications");
+			options.addArguments("--start-maximized");
 			driver = new ChromeDriver(options);
 			break;
 
@@ -39,7 +40,7 @@ public class Initialization {
 			break;
 		}
 
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 		driver.get("https://facebook.com");
 	}
 
